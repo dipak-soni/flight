@@ -41,6 +41,7 @@ def llm_response(airport_code):
         text=save_chunks(file)
         # get respones from llm in json form 
         response=get_json(text,airport_code)
+        time.sleep(1)
         try:
             json_data.append(response)
         except:
